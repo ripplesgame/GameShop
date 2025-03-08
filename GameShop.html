@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* 商品列表容器 */
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* 单个商品项 */
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 商品图片 */
+        .product-image {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* 商品名称 */
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* 商品价格 */
+        .product-price {
+            font-size: 16px;
+            color: #e74c3c;
+        }
+
+        .product-price2 {
+            font-size: 12px;
+            color: rgb(122, 122, 122);
+            text-decoration-line: line-through;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-list">
+        <!-- 商品项 1 -->
+        <div class="product-item" onclick="gotoPage('https://3.cn/2d3Q-l25')">
+            <img class="product-image" src="./images/shop_1.jpg" alt="透视包臀裙">
+            <div class="product-name">透视包臀裙</div>
+            <div class="product-price">￥9.99 <span class="product-price2">￥29.99</span></div>
+        </div>
+        <!-- 商品项 2 -->
+        <div class="product-item" onclick="gotoPage('https://3.cn/2d3Q-l25')">
+            <img class="product-image" src="./images/shop_1.jpg" alt="透视包臀裙">
+            <div class="product-name">透视包臀裙</div>
+            <div class="product-price">￥9.99 <span class="product-price2">￥29.99</span></div>
+        </div>
+        <!-- 商品项 3 -->
+        <div class="product-item" onclick="gotoPage('https://3.cn/2d3Q-l25')">
+            <img class="product-image" src="./images/shop_1.jpg" alt="透视包臀裙">
+            <div class="product-name">透视包臀裙</div>
+            <div class="product-price">￥9.99 <span class="product-price2">￥29.99</span></div>
+        </div>
+    </div>
+</body>
+<script>
+    // 请求json数据
+    // fetch('path/to/your/data.json') // 替换为你的JSON文件路径
+    //     .then(response => response.json()) // 解析JSON数据
+    //     .then(data => {
+    //         // 在这里处理数据，例如显示在页面上
+    //         document.getElementById('dataOutput').innerText = `Name: ${data.name}, Age: ${data.age}`;
+    //     })
+    //     .catch(error => console.error('Error loading the data:', error));
+
+
+    // 挑战
+    function gotoPage(url) {
+        url && window.open(url);
+    }
+
+
+</script>
+
+</html>
